@@ -1,1 +1,1 @@
-# hw2
+# This repository contains the homework assignment associated with Homework #2. This includes ZYLAB sections 6.17, 6.22, 7.25. 8.10, 9.10. It also incudes the solution to the problem activity provided on blackboard.
