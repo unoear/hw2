@@ -1,29 +1,47 @@
 # Antonio Alvarez
 # 1796498
+def exact_change(user_total):
+    if user_total <= 0:
+        print('no change')
+    else:
+        dollar = int(user_total / 100)
+        user_total = user_total % 100
+        quarter = int(user_total / 25)
+        user_total = user_total % 25
+        dime = int(user_total / 10)
+        user_total = user_total % 10
+        nickel = int(user_total / 5)
+        penny = user_total % 5
 
-a = int(input())
-b = int(input())
-c = int(input())
+    if dollar >= 1:
+        if dollar == 1:
+                print(str(dollar) + " dollar")
+        else:
+                print(str(dollar) + " dollars")
+    if quarter >= 1:
+        if quarter == 1:
+                print(str(quarter) + " quarter")
+        else:
+                print(str(quarter) + " quarters")
+    if dime >= 1:
+        if dime == 1:
+                print(str(dime) + " dime")
+        else:
+                print(str(dime) + " dimes")
+    if nickel >= 1:
+        if nickel == 1:
+                print(str(nickel) + " nickel")
+        else:
+                print(str(nickel) + " nickels")
+    if penny >= 1:
+        if penny == 1:
+                return(str(penny) + " penny")
+        else:
+                return(str(penny) + " pennies")
 
-d = int(input())
-e = int(input())
-f = int(input())
-
-def func1(x, y):
-    return a*x + b*y - c
-
-def func2(x, y):
-    return d*x + e*y - f
 
 
-finalx = 100
-finaly = 100
-for x in range(-10, 11):
-    for y in range(-10,11):
-        if func1(x,y) == func2(x,y) and func1(x,y) == 0:
-            finalx = x
-            finaly = y
-if finalx != 100:
-    print(finalx, finaly)
-else:
-    print('No solution')
+
+user_total = int(input())
+
+print(exact_change(user_total))
